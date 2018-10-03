@@ -42,17 +42,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Crud\AddressCrudFactory.cs" />
+    <Compile Include="Crud\ContactCrudFactory.cs" />
     <Compile Include="Crud\CrudFactory.cs" />
     <Compile Include="Crud\AccountCrudFactory.cs" />
     <Compile Include="Crud\CustomerCrudFactory.cs" />
+    <Compile Include="Crud\LoanCrudFactory.cs" />
     <Compile Include="Dao\SqlDao.cs" />
     <Compile Include="Dao\SqlOperation.cs" />
     <Compile Include="Mapper\AccountMapper.cs" />
     <Compile Include="Mapper\AddressMapper.cs" />
+    <Compile Include="Mapper\ContactMapper.cs" />
     <Compile Include="Mapper\CustomerMapper.cs" />
     <Compile Include="Mapper\EntityMapper.cs" />
     <Compile Include="Mapper\IObjectMapper.cs" />
     <Compile Include="Mapper\ISqlStatements.cs" />
+    <Compile Include="Mapper\LoanMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

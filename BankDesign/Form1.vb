@@ -5,7 +5,7 @@
         CustomerControl1.BringToFront()
     End Sub
 
-    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+    Private Sub Label3_Click(sender As Object, e As EventArgs) 
     End Sub
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
@@ -31,5 +31,20 @@
         SidePanel.Height = CtmConfig_btn.Height
         SidePanel.Top = CtmConfig_btn.Top
         ContactControl1.BringToFront()
+    End Sub
+
+    Private Sub Credit_btn_Click(sender As Object, e As EventArgs) Handles Loan_btn.Click
+        SidePanel.Height = Loan_btn.Height
+        SidePanel.Top = Loan_btn.Top
+        LoanControl1.BringToFront()
+       
+    End Sub
+
+    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles  Label5.Click
+
+    End Sub
+
+    Private Sub LoanControl1_Load(sender As Object, e As EventArgs) Handles LoanControl1.Load
+
     End Sub
 End Class

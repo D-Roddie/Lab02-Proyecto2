@@ -45,7 +45,9 @@
   <ItemGroup>
     <Compile Include="AccountManagement.cs" />
     <Compile Include="AddressManagement.cs" />
+    <Compile Include="ContactManagement.cs" />
     <Compile Include="CustomerManagement.cs" />
+    <Compile Include="LoanManagement.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

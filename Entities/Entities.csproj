@@ -44,7 +44,9 @@
     <Compile Include="Account.cs" />
     <Compile Include="Address.cs" />
     <Compile Include="BaseEntity.cs" />
+    <Compile Include="Contact.cs" />
     <Compile Include="Customer.cs" />
+    <Compile Include="Loans.cs" />
     <Compile Include="ObjectDumper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

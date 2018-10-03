@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using DataAccess.Dao;
 using Entities;
 
@@ -9,12 +8,8 @@ namespace DataAccess.Mapper
     {
         private const string DB_COL_ID = "ID";
         private const string DB_COL_ACCNAME = "ACCNAME";
-        private const string DB_COL_ACCNUM = "ACCNUM";
-        private const string DB_COL_CUSTACNUM = "CUSTACNUM";
         private const string DB_COL_CURRECY = "CURRENCY";
         private const string DB_COL_BALANCE = "BALANCE";
-        private const string DB_COL_APDATE = "APDATE";
-        private const string DB_COL_ACSTATE = "ACSTATE";
 
         public BaseEntity BuildObject(Dictionary<string, object> row)
         {
@@ -22,12 +17,8 @@ namespace DataAccess.Mapper
             {
                 Identification = GetStringValue(row, DB_COL_ID),
                 AccountName = GetStringValue(row, DB_COL_ACCNAME),
-                AccoutNumber = GetStringValue(row, DB_COL_ACCNUM),
-                CustomerAccountNumber = GetStringValue(row, DB_COL_CUSTACNUM),
                 Currency = GetStringValue(row, DB_COL_CURRECY),
-                Balance = GetIntValue(row, DB_COL_BALANCE),
-                ApertureDate = GetStringValue(row, DB_COL_APDATE),
-                State = GetStringValue(row, DB_COL_ACSTATE)
+                Balance = GetIntValue(row, DB_COL_BALANCE)
             };
             return account;
         }
@@ -50,12 +41,8 @@ namespace DataAccess.Mapper
             var c = (Account) entity;
             operation.AddVarcharParam(DB_COL_ID, c.Identification);
             operation.AddVarcharParam(DB_COL_ACCNAME, c.AccountName);
-            operation.AddVarcharParam(DB_COL_ACCNUM, c.AccoutNumber);
-            operation.AddVarcharParam(DB_COL_CUSTACNUM, c.CustomerAccountNumber);
             operation.AddVarcharParam(DB_COL_CURRECY, c.Currency);
             operation.AddIntParam(DB_COL_BALANCE, c.Balance);
-            operation.AddVarcharParam(DB_COL_APDATE, c.ApertureDate);
-            operation.AddVarcharParam(DB_COL_ACSTATE, c.State);
 
             return operation;
         }
@@ -72,12 +59,8 @@ namespace DataAccess.Mapper
             var c = (Account) entity;
             operation.AddVarcharParam(DB_COL_ID, c.Identification);
             operation.AddVarcharParam(DB_COL_ACCNAME, c.AccountName);
-            operation.AddVarcharParam(DB_COL_ACCNUM, c.AccoutNumber);
-            operation.AddVarcharParam(DB_COL_CUSTACNUM, c.CustomerAccountNumber);
             operation.AddVarcharParam(DB_COL_CURRECY, c.Currency);
             operation.AddIntParam(DB_COL_BALANCE, c.Balance);
-            operation.AddVarcharParam(DB_COL_APDATE, c.ApertureDate);
-            operation.AddVarcharParam(DB_COL_ACSTATE, c.State);
 
             return operation;
         }
@@ -97,7 +80,5 @@ namespace DataAccess.Mapper
             operation.AddVarcharParam(DB_COL_ID, c.Identification);
             return operation;
         }
-
-        
     }
 }

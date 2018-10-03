@@ -67,16 +67,15 @@ namespace DataAccess.Mapper
 
         public SqlOperation GetDeleteStatement(BaseEntity entity)
         {
-            var operation = new SqlOperation {ProcedureName = "DEL_ACCOUNT_PR"};
+            var operation = new SqlOperation {ProcedureName = "DEL_ADDRESS_PR"};
             var c = (Address) entity;
             operation.AddVarcharParam(DB_COL_IDCUSTOMER, c.IDCustomer);
             return operation;
-
         }
 
         public SqlOperation GetRetrieveStatement(BaseEntity entity)
         {
-            var operation = new SqlOperation {ProcedureName = "RET_ACCOUNT_PR"};
+            var operation = new SqlOperation {ProcedureName = "RET_ADDRESS_PR"};
             var c = (Address) entity;
             operation.AddVarcharParam(DB_COL_IDCUSTOMER, c.IDCustomer);
             return operation;

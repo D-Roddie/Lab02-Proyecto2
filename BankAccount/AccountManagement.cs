@@ -28,12 +28,12 @@ namespace BankAccount
             return crudAccount.Retrieve<Account>(account);
         }
 
-        internal void Update(Account account)
+        public void Update(Account account)
         {
             crudAccount.Update(account);
         }
 
-        internal void Delete(Account account)
+        public void Delete(Account account)
         {
             crudAccount.Delete(account);
         }

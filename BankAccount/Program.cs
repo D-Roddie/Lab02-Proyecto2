@@ -144,7 +144,7 @@ namespace BankAccount
             switch (pOption)
             {
                 case 1:
-                    AccountRegistration();
+                    //AccountRegistration();
                     break;
                 case 2:
                     DeleteAccount();
@@ -156,7 +156,7 @@ namespace BankAccount
                     SearchAccount();
                     break;
                 case 5:
-                    UpdateAccount();
+                    //UpdateAccount();
                     break;
                 default:
                     Console.WriteLine("Invalid Option");
@@ -211,33 +211,33 @@ namespace BankAccount
             }
         }
 
-        private static void AccountRegistration()
-        {
-            var account = new Account();
-            Console.WriteLine();
-            Console.WriteLine("Fill the forms with the required information");
-            Console.WriteLine();
-            Console.Write("ID: ");
-            account.Identification = Console.ReadLine();
-            Console.Write("Account name: ");
-            account.AccountName = Console.ReadLine();
-            Console.Write("Account number: ");
-            account.AccoutNumber = Console.ReadLine();
-            Console.Write("Customer Account Number: ");
-            account.CustomerAccountNumber = Console.ReadLine();
-            Console.Write("Currency: ");
-            account.Currency = Console.ReadLine();
-            Console.Write("Balance: ");
-            account.Balance = int.Parse(Console.ReadLine());
-            Console.Write("Aperture Date: ");
-            account.ApertureDate = Console.ReadLine();
-            Console.Write("State: ");
-            account.State = Console.ReadLine();
+        //private static void AccountRegistration()
+        //{
+        //    var account = new Account();
+        //    Console.WriteLine();
+        //    Console.WriteLine("Fill the forms with the required information");
+        //    Console.WriteLine();
+        //    Console.Write("ID: ");
+        //    account.Identification = Console.ReadLine();
+        //    Console.Write("Account name: ");
+        //    account.AccountName = Console.ReadLine();
+        //    Console.Write("Account number: ");
+        //    account.AccoutNumber = Console.ReadLine();
+        //    Console.Write("Customer Account Number: ");
+        //    account.CustomerAccountNumber = Console.ReadLine();
+        //    Console.Write("Currency: ");
+        //    account.Currency = Console.ReadLine();
+        //    Console.Write("Balance: ");
+        //    account.Balance = int.Parse(Console.ReadLine());
+        //    Console.Write("Aperture Date: ");
+        //    account.ApertureDate = Console.ReadLine();
+        //    Console.Write("State: ");
+        //    account.State = Console.ReadLine();
 
-            AccManagement.Create(account);
-            Console.WriteLine();
-            Console.WriteLine("Account Registration Successfull");
-        }
+        //    AccManagement.Create(account);
+        //    Console.WriteLine();
+        //    Console.WriteLine("Account Registration Successfull");
+        //}
 
         private static void RetrieveAllAccounts()
         {
@@ -292,42 +292,42 @@ namespace BankAccount
             }
         }
 
-        private static void UpdateAccount()
-        {
-            var account = new Account();
-            Console.WriteLine("Update Account");
-            Console.WriteLine();
-            Console.WriteLine("Type the ID of the account: ");
-            account.Identification = Console.ReadLine();
-            account = AccManagement.RetrieveById(account);
+        //private static void UpdateAccount()
+        //{
+        //    var account = new Account();
+        //    Console.WriteLine("Update Account");
+        //    Console.WriteLine();
+        //    Console.WriteLine("Type the ID of the account: ");
+        //    account.Identification = Console.ReadLine();
+        //    account = AccManagement.RetrieveById(account);
 
-            if (account != null)
-            {
-                Console.Write(" ==> " + account.GetEntityInformation());
-                Console.WriteLine();
-                Console.WriteLine("Account Name: ");
-                account.AccountName = Console.ReadLine();
-                Console.WriteLine("Account Number: ");
-                account.AccoutNumber = Console.ReadLine();
-                Console.WriteLine("Customer Account Number: ");
-                account.CustomerAccountNumber = Console.ReadLine();
-                Console.WriteLine("Currency: ");
-                account.Currency = Console.ReadLine();
-                Console.WriteLine("Balance: ");
-                account.Balance = int.Parse(Console.ReadLine());
-                Console.WriteLine("Aperture Date: ");
-                account.ApertureDate = Console.ReadLine();
-                Console.WriteLine("State: ");
-                account.State = Console.ReadLine();
+        //    if (account != null)
+        //    {
+        //        Console.Write(" ==> " + account.GetEntityInformation());
+        //        Console.WriteLine();
+        //        Console.WriteLine("Account Name: ");
+        //        account.AccountName = Console.ReadLine();
+        //        Console.WriteLine("Account Number: ");
+        //        account.AccoutNumber = Console.ReadLine();
+        //        Console.WriteLine("Customer Account Number: ");
+        //        account.CustomerAccountNumber = Console.ReadLine();
+        //        Console.WriteLine("Currency: ");
+        //        account.Currency = Console.ReadLine();
+        //        Console.WriteLine("Balance: ");
+        //        account.Balance = int.Parse(Console.ReadLine());
+        //        Console.WriteLine("Aperture Date: ");
+        //        account.ApertureDate = Console.ReadLine();
+        //        Console.WriteLine("State: ");
+        //        account.State = Console.ReadLine();
 
-                AccManagement.Update(account);
-                Console.WriteLine("Account Update Successfull");
-            }
-            else
-            {
-                throw new Exception("ERROR: No Accounts Registered");
-            }
-        }
+        //        AccManagement.Update(account);
+        //        Console.WriteLine("Account Update Successfull");
+        //    }
+        //    else
+        //    {
+        //        throw new Exception("ERROR: No Accounts Registered");
+        //    }
+        //}
 
 
         //private static void CreateCustomer()

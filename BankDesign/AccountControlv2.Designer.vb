@@ -27,14 +27,14 @@ Partial Class AccountControlv2
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.ListView1 = New System.Windows.Forms.ListView()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.AccountID_txt = New System.Windows.Forms.TextBox()
+        Me.AccountName_txt = New System.Windows.Forms.TextBox()
+        Me.AccountCurrency_txt = New System.Windows.Forms.TextBox()
+        Me.AccountBalance_txt = New System.Windows.Forms.TextBox()
+        Me.AccountRegister_btn = New System.Windows.Forms.Button()
+        Me.Account_ListView = New System.Windows.Forms.ListView()
+        Me.AccountDelete_btn = New System.Windows.Forms.Button()
+        Me.AccountUpdate_btn = New System.Windows.Forms.Button()
         Me.SuspendLayout
         '
         'Label1
@@ -42,10 +42,9 @@ Partial Class AccountControlv2
         Me.Label1.AutoSize = true
         Me.Label1.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(178,Byte),Integer), CType(CType(8,Byte),Integer), CType(CType(55,Byte),Integer))
-        Me.Label1.Location = New System.Drawing.Point(48, 41)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(36, 33)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(311, 32)
+        Me.Label1.Size = New System.Drawing.Size(244, 25)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Account Management"
         '
@@ -54,10 +53,9 @@ Partial Class AccountControlv2
         Me.Label2.AutoSize = true
         Me.Label2.Font = New System.Drawing.Font("Century Gothic", 12!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(49, 183)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(37, 149)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(30, 23)
+        Me.Label2.Size = New System.Drawing.Size(24, 19)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "ID"
         '
@@ -66,10 +64,9 @@ Partial Class AccountControlv2
         Me.Label3.AutoSize = true
         Me.Label3.Font = New System.Drawing.Font("Century Gothic", 12!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(49, 231)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(37, 188)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(70, 23)
+        Me.Label3.Size = New System.Drawing.Size(58, 19)
         Me.Label3.TabIndex = 0
         Me.Label3.Text = "Name"
         '
@@ -78,10 +75,9 @@ Partial Class AccountControlv2
         Me.Label4.AutoSize = true
         Me.Label4.Font = New System.Drawing.Font("Century Gothic", 12!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(49, 279)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(37, 227)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(100, 23)
+        Me.Label4.Size = New System.Drawing.Size(80, 19)
         Me.Label4.TabIndex = 0
         Me.Label4.Text = "Currency"
         '
@@ -90,128 +86,118 @@ Partial Class AccountControlv2
         Me.Label5.AutoSize = true
         Me.Label5.Font = New System.Drawing.Font("Century Gothic", 12!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(49, 327)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(37, 266)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(91, 23)
+        Me.Label5.Size = New System.Drawing.Size(74, 19)
         Me.Label5.TabIndex = 0
         Me.Label5.Text = "Balance"
         '
-        'TextBox1
+        'AccountID_txt
         '
-        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(232, 177)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(178, 29)
-        Me.TextBox1.TabIndex = 1
+        Me.AccountID_txt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.AccountID_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.AccountID_txt.Location = New System.Drawing.Point(174, 144)
+        Me.AccountID_txt.Name = "AccountID_txt"
+        Me.AccountID_txt.Size = New System.Drawing.Size(134, 24)
+        Me.AccountID_txt.TabIndex = 1
         '
-        'TextBox2
+        'AccountName_txt
         '
-        Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(232, 225)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(178, 29)
-        Me.TextBox2.TabIndex = 1
+        Me.AccountName_txt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.AccountName_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.AccountName_txt.Location = New System.Drawing.Point(174, 183)
+        Me.AccountName_txt.Name = "AccountName_txt"
+        Me.AccountName_txt.Size = New System.Drawing.Size(134, 24)
+        Me.AccountName_txt.TabIndex = 1
         '
-        'TextBox3
+        'AccountCurrency_txt
         '
-        Me.TextBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(232, 273)
-        Me.TextBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(178, 29)
-        Me.TextBox3.TabIndex = 1
+        Me.AccountCurrency_txt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.AccountCurrency_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.AccountCurrency_txt.Location = New System.Drawing.Point(174, 222)
+        Me.AccountCurrency_txt.Name = "AccountCurrency_txt"
+        Me.AccountCurrency_txt.Size = New System.Drawing.Size(134, 24)
+        Me.AccountCurrency_txt.TabIndex = 1
         '
-        'TextBox4
+        'AccountBalance_txt
         '
-        Me.TextBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(232, 321)
-        Me.TextBox4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(178, 29)
-        Me.TextBox4.TabIndex = 1
+        Me.AccountBalance_txt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.AccountBalance_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.AccountBalance_txt.Location = New System.Drawing.Point(174, 261)
+        Me.AccountBalance_txt.Name = "AccountBalance_txt"
+        Me.AccountBalance_txt.Size = New System.Drawing.Size(134, 24)
+        Me.AccountBalance_txt.TabIndex = 1
         '
-        'Button1
+        'AccountRegister_btn
         '
-        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.Green
-        Me.Button1.FlatAppearance.BorderSize = 3
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(127, 482)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(145, 50)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Register"
-        Me.Button1.UseVisualStyleBackColor = true
+        Me.AccountRegister_btn.FlatAppearance.BorderColor = System.Drawing.Color.Green
+        Me.AccountRegister_btn.FlatAppearance.BorderSize = 3
+        Me.AccountRegister_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.AccountRegister_btn.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.AccountRegister_btn.ForeColor = System.Drawing.Color.White
+        Me.AccountRegister_btn.Location = New System.Drawing.Point(95, 392)
+        Me.AccountRegister_btn.Name = "AccountRegister_btn"
+        Me.AccountRegister_btn.Size = New System.Drawing.Size(109, 41)
+        Me.AccountRegister_btn.TabIndex = 2
+        Me.AccountRegister_btn.Text = "Register"
+        Me.AccountRegister_btn.UseVisualStyleBackColor = true
         '
-        'ListView1
+        'Account_ListView
         '
-        Me.ListView1.Location = New System.Drawing.Point(612, 102)
-        Me.ListView1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(553, 317)
-        Me.ListView1.TabIndex = 3
-        Me.ListView1.UseCompatibleStateImageBehavior = false
+        Me.Account_ListView.Location = New System.Drawing.Point(459, 83)
+        Me.Account_ListView.Name = "Account_ListView"
+        Me.Account_ListView.Size = New System.Drawing.Size(416, 258)
+        Me.Account_ListView.TabIndex = 3
+        Me.Account_ListView.UseCompatibleStateImageBehavior = false
         '
-        'Button2
+        'AccountDelete_btn
         '
-        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.Maroon
-        Me.Button2.FlatAppearance.BorderSize = 3
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(1020, 482)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(145, 50)
-        Me.Button2.TabIndex = 2
-        Me.Button2.Text = "Delete"
-        Me.Button2.UseVisualStyleBackColor = true
+        Me.AccountDelete_btn.FlatAppearance.BorderColor = System.Drawing.Color.Maroon
+        Me.AccountDelete_btn.FlatAppearance.BorderSize = 3
+        Me.AccountDelete_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.AccountDelete_btn.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.AccountDelete_btn.ForeColor = System.Drawing.Color.White
+        Me.AccountDelete_btn.Location = New System.Drawing.Point(765, 392)
+        Me.AccountDelete_btn.Name = "AccountDelete_btn"
+        Me.AccountDelete_btn.Size = New System.Drawing.Size(109, 41)
+        Me.AccountDelete_btn.TabIndex = 2
+        Me.AccountDelete_btn.Text = "Delete"
+        Me.AccountDelete_btn.UseVisualStyleBackColor = true
         '
-        'Button3
+        'AccountUpdate_btn
         '
-        Me.Button3.FlatAppearance.BorderColor = System.Drawing.Color.Olive
-        Me.Button3.FlatAppearance.BorderSize = 3
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.Location = New System.Drawing.Point(612, 482)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(145, 50)
-        Me.Button3.TabIndex = 2
-        Me.Button3.Text = "Update"
-        Me.Button3.UseVisualStyleBackColor = true
+        Me.AccountUpdate_btn.FlatAppearance.BorderColor = System.Drawing.Color.Olive
+        Me.AccountUpdate_btn.FlatAppearance.BorderSize = 3
+        Me.AccountUpdate_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.AccountUpdate_btn.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.AccountUpdate_btn.ForeColor = System.Drawing.Color.White
+        Me.AccountUpdate_btn.Location = New System.Drawing.Point(459, 392)
+        Me.AccountUpdate_btn.Name = "AccountUpdate_btn"
+        Me.AccountUpdate_btn.Size = New System.Drawing.Size(109, 41)
+        Me.AccountUpdate_btn.TabIndex = 2
+        Me.AccountUpdate_btn.Text = "Update"
+        Me.AccountUpdate_btn.UseVisualStyleBackColor = true
         '
         'AccountControlv2
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8!, 16!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(41,Byte),Integer), CType(CType(39,Byte),Integer), CType(CType(40,Byte),Integer))
-        Me.Controls.Add(Me.ListView1)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Account_ListView)
+        Me.Controls.Add(Me.AccountDelete_btn)
+        Me.Controls.Add(Me.AccountUpdate_btn)
+        Me.Controls.Add(Me.AccountRegister_btn)
+        Me.Controls.Add(Me.AccountBalance_txt)
+        Me.Controls.Add(Me.AccountCurrency_txt)
+        Me.Controls.Add(Me.AccountName_txt)
+        Me.Controls.Add(Me.AccountID_txt)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "AccountControlv2"
-        Me.Size = New System.Drawing.Size(1269, 620)
+        Me.Size = New System.Drawing.Size(952, 504)
         Me.ResumeLayout(false)
         Me.PerformLayout
 
@@ -222,12 +208,12 @@ End Sub
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents ListView1 As ListView
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents AccountID_txt As TextBox
+    Friend WithEvents AccountName_txt As TextBox
+    Friend WithEvents AccountCurrency_txt As TextBox
+    Friend WithEvents AccountBalance_txt As TextBox
+    Friend WithEvents AccountRegister_btn As Button
+    Friend WithEvents Account_ListView As ListView
+    Friend WithEvents AccountDelete_btn As Button
+    Friend WithEvents AccountUpdate_btn As Button
 End Class

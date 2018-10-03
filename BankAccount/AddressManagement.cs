@@ -28,12 +28,12 @@ namespace BankAccount
             return crudAddress.Retrieve<Address>(address);
         }
 
-        internal void Update(Address address)
+        public void Update(Address address)
         {
             crudAddress.Update(address);
         }
 
-        internal void Delete(Address address)
+        public void Delete(Address address)
         {
             crudAddress.Delete(address);
         }

@@ -22,33 +22,30 @@ Partial Class ContactControl
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ContactControl))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.ListView1 = New System.Windows.Forms.ListView()
-        Me.ListView2 = New System.Windows.Forms.ListView()
+        Me.ContactID_txt = New System.Windows.Forms.TextBox()
+        Me.Contact_ListView = New System.Windows.Forms.ListView()
+        Me.Address_ListView = New System.Windows.Forms.ListView()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.ContactType_txt = New System.Windows.Forms.TextBox()
+        Me.ContactValue_txt = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button7 = New System.Windows.Forms.Button()
-        Me.Button8 = New System.Windows.Forms.Button()
-        Me.Button9 = New System.Windows.Forms.Button()
-        Me.Button10 = New System.Windows.Forms.Button()
-        Me.Button11 = New System.Windows.Forms.Button()
+        Me.AddressID_txt = New System.Windows.Forms.TextBox()
+        Me.AddressProvince_txt = New System.Windows.Forms.TextBox()
+        Me.AddressStreet_txt = New System.Windows.Forms.TextBox()
+        Me.AddressDistrict_txt = New System.Windows.Forms.TextBox()
+        Me.AddressUpdate_btn = New System.Windows.Forms.Button()
+        Me.AddressDelete_btn = New System.Windows.Forms.Button()
+        Me.ContactUpdate_btn = New System.Windows.Forms.Button()
+        Me.ContactDelete_btn = New System.Windows.Forms.Button()
+        Me.ContactRegister_btn = New System.Windows.Forms.Button()
+        Me.AddressRegister_btn = New System.Windows.Forms.Button()
         Me.SuspendLayout
         '
         'Label1
@@ -58,10 +55,9 @@ Partial Class ContactControl
         Me.Label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label1.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(178,Byte),Integer), CType(CType(8,Byte),Integer), CType(CType(55,Byte),Integer))
-        Me.Label1.Location = New System.Drawing.Point(48, 41)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(36, 33)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(120, 32)
+        Me.Label1.Size = New System.Drawing.Size(93, 25)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Contact"
         '
@@ -71,39 +67,35 @@ Partial Class ContactControl
         Me.Label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label8.Font = New System.Drawing.Font("Century Gothic", 12!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(49, 108)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label8.Location = New System.Drawing.Point(37, 88)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(115, 23)
+        Me.Label8.Size = New System.Drawing.Size(89, 19)
         Me.Label8.TabIndex = 0
         Me.Label8.Text = "Contact ID"
         '
-        'TextBox6
+        'ContactID_txt
         '
-        Me.TextBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.TextBox6.Location = New System.Drawing.Point(232, 102)
-        Me.TextBox6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(177, 29)
-        Me.TextBox6.TabIndex = 1
+        Me.ContactID_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.ContactID_txt.Location = New System.Drawing.Point(174, 83)
+        Me.ContactID_txt.Name = "ContactID_txt"
+        Me.ContactID_txt.Size = New System.Drawing.Size(134, 24)
+        Me.ContactID_txt.TabIndex = 1
         '
-        'ListView1
+        'Contact_ListView
         '
-        Me.ListView1.Location = New System.Drawing.Point(53, 394)
-        Me.ListView1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(443, 155)
-        Me.ListView1.TabIndex = 3
-        Me.ListView1.UseCompatibleStateImageBehavior = false
+        Me.Contact_ListView.Location = New System.Drawing.Point(40, 320)
+        Me.Contact_ListView.Name = "Contact_ListView"
+        Me.Contact_ListView.Size = New System.Drawing.Size(333, 127)
+        Me.Contact_ListView.TabIndex = 3
+        Me.Contact_ListView.UseCompatibleStateImageBehavior = false
         '
-        'ListView2
+        'Address_ListView
         '
-        Me.ListView2.Location = New System.Drawing.Point(708, 394)
-        Me.ListView2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.ListView2.Name = "ListView2"
-        Me.ListView2.Size = New System.Drawing.Size(442, 155)
-        Me.ListView2.TabIndex = 3
-        Me.ListView2.UseCompatibleStateImageBehavior = false
+        Me.Address_ListView.Location = New System.Drawing.Point(531, 320)
+        Me.Address_ListView.Name = "Address_ListView"
+        Me.Address_ListView.Size = New System.Drawing.Size(332, 127)
+        Me.Address_ListView.TabIndex = 3
+        Me.Address_ListView.UseCompatibleStateImageBehavior = false
         '
         'Label2
         '
@@ -111,10 +103,9 @@ Partial Class ContactControl
         Me.Label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label2.Font = New System.Drawing.Font("Century Gothic", 12!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(49, 156)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(37, 127)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(62, 23)
+        Me.Label2.Size = New System.Drawing.Size(50, 19)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Type "
         '
@@ -124,30 +115,27 @@ Partial Class ContactControl
         Me.Label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label3.Font = New System.Drawing.Font("Century Gothic", 12!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(49, 204)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(37, 166)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(67, 23)
+        Me.Label3.Size = New System.Drawing.Size(55, 19)
         Me.Label3.TabIndex = 0
         Me.Label3.Text = "Value"
         '
-        'TextBox1
+        'ContactType_txt
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(232, 150)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(177, 29)
-        Me.TextBox1.TabIndex = 1
+        Me.ContactType_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.ContactType_txt.Location = New System.Drawing.Point(174, 122)
+        Me.ContactType_txt.Name = "ContactType_txt"
+        Me.ContactType_txt.Size = New System.Drawing.Size(134, 24)
+        Me.ContactType_txt.TabIndex = 1
         '
-        'TextBox2
+        'ContactValue_txt
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(232, 198)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(177, 29)
-        Me.TextBox2.TabIndex = 1
+        Me.ContactValue_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.ContactValue_txt.Location = New System.Drawing.Point(174, 161)
+        Me.ContactValue_txt.Name = "ContactValue_txt"
+        Me.ContactValue_txt.Size = New System.Drawing.Size(134, 24)
+        Me.ContactValue_txt.TabIndex = 1
         '
         'Label5
         '
@@ -156,10 +144,9 @@ Partial Class ContactControl
         Me.Label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label5.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(178,Byte),Integer), CType(CType(8,Byte),Integer), CType(CType(55,Byte),Integer))
-        Me.Label5.Location = New System.Drawing.Point(702, 41)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(526, 33)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(121, 32)
+        Me.Label5.Size = New System.Drawing.Size(94, 25)
         Me.Label5.TabIndex = 0
         Me.Label5.Text = "Address"
         '
@@ -169,10 +156,9 @@ Partial Class ContactControl
         Me.Label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label6.Font = New System.Drawing.Font("Century Gothic", 12!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(703, 109)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Location = New System.Drawing.Point(527, 89)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(114, 23)
+        Me.Label6.Size = New System.Drawing.Size(89, 19)
         Me.Label6.TabIndex = 0
         Me.Label6.Text = "Address ID"
         '
@@ -182,10 +168,9 @@ Partial Class ContactControl
         Me.Label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label7.Font = New System.Drawing.Font("Century Gothic", 12!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(703, 157)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Location = New System.Drawing.Point(527, 128)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(94, 23)
+        Me.Label7.Size = New System.Drawing.Size(76, 19)
         Me.Label7.TabIndex = 0
         Me.Label7.Text = "Province"
         '
@@ -195,10 +180,9 @@ Partial Class ContactControl
         Me.Label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label9.Font = New System.Drawing.Font("Century Gothic", 12!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(703, 205)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label9.Location = New System.Drawing.Point(527, 167)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(64, 23)
+        Me.Label9.Size = New System.Drawing.Size(50, 19)
         Me.Label9.TabIndex = 0
         Me.Label9.Text = "Street"
         '
@@ -208,189 +192,150 @@ Partial Class ContactControl
         Me.Label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label10.Font = New System.Drawing.Font("Century Gothic", 12!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label10.ForeColor = System.Drawing.Color.White
-        Me.Label10.Location = New System.Drawing.Point(703, 253)
-        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label10.Location = New System.Drawing.Point(527, 206)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(74, 23)
+        Me.Label10.Size = New System.Drawing.Size(57, 19)
         Me.Label10.TabIndex = 0
         Me.Label10.Text = "District"
         '
-        'TextBox4
+        'AddressID_txt
         '
-        Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(886, 102)
-        Me.TextBox4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(177, 29)
-        Me.TextBox4.TabIndex = 1
+        Me.AddressID_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.AddressID_txt.Location = New System.Drawing.Point(664, 83)
+        Me.AddressID_txt.Name = "AddressID_txt"
+        Me.AddressID_txt.Size = New System.Drawing.Size(134, 24)
+        Me.AddressID_txt.TabIndex = 1
         '
-        'TextBox5
+        'AddressProvince_txt
         '
-        Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(886, 150)
-        Me.TextBox5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(177, 29)
-        Me.TextBox5.TabIndex = 1
+        Me.AddressProvince_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.AddressProvince_txt.Location = New System.Drawing.Point(664, 122)
+        Me.AddressProvince_txt.Name = "AddressProvince_txt"
+        Me.AddressProvince_txt.Size = New System.Drawing.Size(134, 24)
+        Me.AddressProvince_txt.TabIndex = 1
         '
-        'TextBox7
+        'AddressStreet_txt
         '
-        Me.TextBox7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.TextBox7.Location = New System.Drawing.Point(886, 198)
-        Me.TextBox7.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(177, 29)
-        Me.TextBox7.TabIndex = 1
+        Me.AddressStreet_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.AddressStreet_txt.Location = New System.Drawing.Point(664, 161)
+        Me.AddressStreet_txt.Name = "AddressStreet_txt"
+        Me.AddressStreet_txt.Size = New System.Drawing.Size(134, 24)
+        Me.AddressStreet_txt.TabIndex = 1
         '
-        'TextBox8
+        'AddressDistrict_txt
         '
-        Me.TextBox8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.TextBox8.Location = New System.Drawing.Point(886, 246)
-        Me.TextBox8.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(177, 29)
-        Me.TextBox8.TabIndex = 1
+        Me.AddressDistrict_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.AddressDistrict_txt.Location = New System.Drawing.Point(664, 200)
+        Me.AddressDistrict_txt.Name = "AddressDistrict_txt"
+        Me.AddressDistrict_txt.Size = New System.Drawing.Size(134, 24)
+        Me.AddressDistrict_txt.TabIndex = 1
         '
-        'Button2
+        'AddressUpdate_btn
         '
-        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.Green
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Image = CType(resources.GetObject("Button2.Image"),System.Drawing.Image)
-        Me.Button2.Location = New System.Drawing.Point(708, 557)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(56, 50)
-        Me.Button2.TabIndex = 4
-        Me.Button2.UseVisualStyleBackColor = true
+        Me.AddressUpdate_btn.FlatAppearance.BorderColor = System.Drawing.Color.Olive
+        Me.AddressUpdate_btn.FlatAppearance.BorderSize = 3
+        Me.AddressUpdate_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.AddressUpdate_btn.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.AddressUpdate_btn.ForeColor = System.Drawing.Color.White
+        Me.AddressUpdate_btn.Location = New System.Drawing.Point(531, 453)
+        Me.AddressUpdate_btn.Name = "AddressUpdate_btn"
+        Me.AddressUpdate_btn.Size = New System.Drawing.Size(109, 41)
+        Me.AddressUpdate_btn.TabIndex = 4
+        Me.AddressUpdate_btn.Text = "Update"
+        Me.AddressUpdate_btn.UseVisualStyleBackColor = true
         '
-        'Button5
+        'AddressDelete_btn
         '
-        Me.Button5.FlatAppearance.BorderColor = System.Drawing.Color.Green
-        Me.Button5.FlatAppearance.BorderSize = 0
-        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button5.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.Button5.ForeColor = System.Drawing.Color.White
-        Me.Button5.Image = CType(resources.GetObject("Button5.Image"),System.Drawing.Image)
-        Me.Button5.Location = New System.Drawing.Point(761, 557)
-        Me.Button5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(56, 50)
-        Me.Button5.TabIndex = 4
-        Me.Button5.UseVisualStyleBackColor = true
+        Me.AddressDelete_btn.FlatAppearance.BorderColor = System.Drawing.Color.Maroon
+        Me.AddressDelete_btn.FlatAppearance.BorderSize = 3
+        Me.AddressDelete_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.AddressDelete_btn.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.AddressDelete_btn.ForeColor = System.Drawing.Color.White
+        Me.AddressDelete_btn.Location = New System.Drawing.Point(754, 453)
+        Me.AddressDelete_btn.Name = "AddressDelete_btn"
+        Me.AddressDelete_btn.Size = New System.Drawing.Size(109, 41)
+        Me.AddressDelete_btn.TabIndex = 4
+        Me.AddressDelete_btn.Text = "Delete"
+        Me.AddressDelete_btn.UseVisualStyleBackColor = true
         '
-        'Button6
+        'ContactUpdate_btn
         '
-        Me.Button6.FlatAppearance.BorderColor = System.Drawing.Color.Green
-        Me.Button6.FlatAppearance.BorderSize = 0
-        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button6.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.Button6.ForeColor = System.Drawing.Color.White
-        Me.Button6.Image = CType(resources.GetObject("Button6.Image"),System.Drawing.Image)
-        Me.Button6.Location = New System.Drawing.Point(1094, 557)
-        Me.Button6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(56, 50)
-        Me.Button6.TabIndex = 4
-        Me.Button6.UseVisualStyleBackColor = true
+        Me.ContactUpdate_btn.FlatAppearance.BorderColor = System.Drawing.Color.Olive
+        Me.ContactUpdate_btn.FlatAppearance.BorderSize = 3
+        Me.ContactUpdate_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ContactUpdate_btn.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.ContactUpdate_btn.ForeColor = System.Drawing.Color.White
+        Me.ContactUpdate_btn.Location = New System.Drawing.Point(40, 453)
+        Me.ContactUpdate_btn.Name = "ContactUpdate_btn"
+        Me.ContactUpdate_btn.Size = New System.Drawing.Size(109, 41)
+        Me.ContactUpdate_btn.TabIndex = 4
+        Me.ContactUpdate_btn.Text = "Update"
+        Me.ContactUpdate_btn.UseVisualStyleBackColor = true
         '
-        'Button7
+        'ContactDelete_btn
         '
-        Me.Button7.FlatAppearance.BorderColor = System.Drawing.Color.Green
-        Me.Button7.FlatAppearance.BorderSize = 0
-        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button7.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.Button7.ForeColor = System.Drawing.Color.White
-        Me.Button7.Image = CType(resources.GetObject("Button7.Image"),System.Drawing.Image)
-        Me.Button7.Location = New System.Drawing.Point(53, 557)
-        Me.Button7.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(56, 50)
-        Me.Button7.TabIndex = 4
-        Me.Button7.UseVisualStyleBackColor = true
+        Me.ContactDelete_btn.FlatAppearance.BorderColor = System.Drawing.Color.Maroon
+        Me.ContactDelete_btn.FlatAppearance.BorderSize = 3
+        Me.ContactDelete_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ContactDelete_btn.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.ContactDelete_btn.ForeColor = System.Drawing.Color.White
+        Me.ContactDelete_btn.Location = New System.Drawing.Point(264, 453)
+        Me.ContactDelete_btn.Name = "ContactDelete_btn"
+        Me.ContactDelete_btn.Size = New System.Drawing.Size(109, 41)
+        Me.ContactDelete_btn.TabIndex = 4
+        Me.ContactDelete_btn.Text = "Delete"
+        Me.ContactDelete_btn.UseVisualStyleBackColor = true
         '
-        'Button8
+        'ContactRegister_btn
         '
-        Me.Button8.FlatAppearance.BorderColor = System.Drawing.Color.Green
-        Me.Button8.FlatAppearance.BorderSize = 0
-        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button8.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.Button8.ForeColor = System.Drawing.Color.White
-        Me.Button8.Image = CType(resources.GetObject("Button8.Image"),System.Drawing.Image)
-        Me.Button8.Location = New System.Drawing.Point(108, 557)
-        Me.Button8.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(56, 50)
-        Me.Button8.TabIndex = 4
-        Me.Button8.UseVisualStyleBackColor = true
+        Me.ContactRegister_btn.FlatAppearance.BorderColor = System.Drawing.Color.Green
+        Me.ContactRegister_btn.FlatAppearance.BorderSize = 3
+        Me.ContactRegister_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ContactRegister_btn.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.ContactRegister_btn.ForeColor = System.Drawing.Color.White
+        Me.ContactRegister_btn.Location = New System.Drawing.Point(145, 250)
+        Me.ContactRegister_btn.Margin = New System.Windows.Forms.Padding(2)
+        Me.ContactRegister_btn.Name = "ContactRegister_btn"
+        Me.ContactRegister_btn.Size = New System.Drawing.Size(109, 41)
+        Me.ContactRegister_btn.TabIndex = 6
+        Me.ContactRegister_btn.Text = "Register"
+        Me.ContactRegister_btn.UseVisualStyleBackColor = true
         '
-        'Button9
+        'AddressRegister_btn
         '
-        Me.Button9.FlatAppearance.BorderColor = System.Drawing.Color.Green
-        Me.Button9.FlatAppearance.BorderSize = 0
-        Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button9.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.Button9.ForeColor = System.Drawing.Color.White
-        Me.Button9.Image = CType(resources.GetObject("Button9.Image"),System.Drawing.Image)
-        Me.Button9.Location = New System.Drawing.Point(440, 557)
-        Me.Button9.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(56, 50)
-        Me.Button9.TabIndex = 4
-        Me.Button9.UseVisualStyleBackColor = true
-        '
-        'Button10
-        '
-        Me.Button10.FlatAppearance.BorderColor = System.Drawing.Color.Green
-        Me.Button10.FlatAppearance.BorderSize = 3
-        Me.Button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button10.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.Button10.ForeColor = System.Drawing.Color.White
-        Me.Button10.Location = New System.Drawing.Point(157, 308)
-        Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(145, 50)
-        Me.Button10.TabIndex = 6
-        Me.Button10.Text = "Register"
-        Me.Button10.UseVisualStyleBackColor = true
-        '
-        'Button11
-        '
-        Me.Button11.FlatAppearance.BorderColor = System.Drawing.Color.Green
-        Me.Button11.FlatAppearance.BorderSize = 3
-        Me.Button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button11.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.Button11.ForeColor = System.Drawing.Color.White
-        Me.Button11.Location = New System.Drawing.Point(842, 308)
-        Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(145, 50)
-        Me.Button11.TabIndex = 6
-        Me.Button11.Text = "Register"
-        Me.Button11.UseVisualStyleBackColor = true
+        Me.AddressRegister_btn.FlatAppearance.BorderColor = System.Drawing.Color.Green
+        Me.AddressRegister_btn.FlatAppearance.BorderSize = 3
+        Me.AddressRegister_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.AddressRegister_btn.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.AddressRegister_btn.ForeColor = System.Drawing.Color.White
+        Me.AddressRegister_btn.Location = New System.Drawing.Point(634, 250)
+        Me.AddressRegister_btn.Margin = New System.Windows.Forms.Padding(2)
+        Me.AddressRegister_btn.Name = "AddressRegister_btn"
+        Me.AddressRegister_btn.Size = New System.Drawing.Size(109, 41)
+        Me.AddressRegister_btn.TabIndex = 6
+        Me.AddressRegister_btn.Text = "Register"
+        Me.AddressRegister_btn.UseVisualStyleBackColor = true
         '
         'ContactControl
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8!, 16!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(41,Byte),Integer), CType(CType(39,Byte),Integer), CType(CType(40,Byte),Integer))
-        Me.Controls.Add(Me.Button11)
-        Me.Controls.Add(Me.Button10)
-        Me.Controls.Add(Me.Button9)
-        Me.Controls.Add(Me.Button6)
-        Me.Controls.Add(Me.Button8)
-        Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.Button7)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.ListView2)
-        Me.Controls.Add(Me.ListView1)
-        Me.Controls.Add(Me.TextBox8)
-        Me.Controls.Add(Me.TextBox7)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox6)
+        Me.Controls.Add(Me.AddressRegister_btn)
+        Me.Controls.Add(Me.ContactRegister_btn)
+        Me.Controls.Add(Me.ContactDelete_btn)
+        Me.Controls.Add(Me.AddressDelete_btn)
+        Me.Controls.Add(Me.ContactUpdate_btn)
+        Me.Controls.Add(Me.AddressUpdate_btn)
+        Me.Controls.Add(Me.Address_ListView)
+        Me.Controls.Add(Me.Contact_ListView)
+        Me.Controls.Add(Me.AddressDistrict_txt)
+        Me.Controls.Add(Me.AddressStreet_txt)
+        Me.Controls.Add(Me.ContactValue_txt)
+        Me.Controls.Add(Me.AddressProvince_txt)
+        Me.Controls.Add(Me.ContactType_txt)
+        Me.Controls.Add(Me.AddressID_txt)
+        Me.Controls.Add(Me.ContactID_txt)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label3)
@@ -400,9 +345,8 @@ Partial Class ContactControl
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "ContactControl"
-        Me.Size = New System.Drawing.Size(1269, 620)
+        Me.Size = New System.Drawing.Size(952, 504)
         Me.ResumeLayout(false)
         Me.PerformLayout
 
@@ -410,28 +354,26 @@ End Sub
 
     Friend WithEvents Label1 As Label
     Friend WithEvents Label8 As Label
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents ListView1 As ListView
-    Friend WithEvents ListView2 As ListView
+    Friend WithEvents ContactID_txt As TextBox
+    Friend WithEvents Contact_ListView As ListView
+    Friend WithEvents Address_ListView As ListView
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents ContactType_txt As TextBox
+    Friend WithEvents ContactValue_txt As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button6 As Button
-    Friend WithEvents Button7 As Button
-    Friend WithEvents Button8 As Button
-    Friend WithEvents Button9 As Button
-    Friend WithEvents Button10 As Button
-    Friend WithEvents Button11 As Button
+    Friend WithEvents AddressID_txt As TextBox
+    Friend WithEvents AddressProvince_txt As TextBox
+    Friend WithEvents AddressStreet_txt As TextBox
+    Friend WithEvents AddressDistrict_txt As TextBox
+    Friend WithEvents AddressUpdate_btn As Button
+    Friend WithEvents AddressDelete_btn As Button
+    Friend WithEvents ContactUpdate_btn As Button
+    Friend WithEvents ContactDelete_btn As Button
+    Friend WithEvents ContactRegister_btn As Button
+    Friend WithEvents AddressRegister_btn As Button
 End Class
