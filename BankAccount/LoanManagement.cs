@@ -37,6 +37,5 @@ namespace BankAccount
         {
             crudLoan.Delete(loan);
         }
-
     }
 }

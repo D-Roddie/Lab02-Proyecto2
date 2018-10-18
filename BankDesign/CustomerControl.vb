@@ -29,7 +29,7 @@ Public Class CustomerControl
                 CustomerAge_txt.Text = selectedCustomer.Age
                 CustomerSocialStatus_txt.Text = selectedCustomer.SocialStatus
                 CustomerGender_txt.Text = selectedCustomer.Gender
-                
+
             End If
         Next
     End Sub
@@ -47,7 +47,7 @@ Public Class CustomerControl
     End Sub
 
     Private Sub CustomerRegister_btn_Click(sender As Object, e As EventArgs) Handles CustomerRegister_btn.Click
-        
+
         Dim newCustomer As New Customer
         newCustomer.Id = CustomerID_txt.Text
         newCustomer.Name = CustomerName_txt.Text
@@ -216,28 +216,27 @@ Public Class CustomerControl
         CustomerName_txt.ReadOnly = False
         CustomerName_txt.BackColor = Color.White
         CustomerName_txt.ForeColor = Color.Black
-     
+
         CustomerLastName_txt.ReadOnly = False
         CustomerLastName_txt.BackColor = Color.White
         CustomerLastName_txt.ForeColor = Color.Black
-        
+
         CustomerBirthday_txt.ReadOnly = False
         CustomerBirthday_txt.BackColor = Color.White
         CustomerBirthday_txt.ForeColor = Color.Black
-      
+
         CustomerAge_txt.ReadOnly = False
         CustomerAge_txt.BackColor = Color.White
         CustomerAge_txt.ForeColor = Color.Black
-       
+
         CustomerSocialStatus_txt.ReadOnly = False
         CustomerSocialStatus_txt.BackColor = Color.White
         CustomerSocialStatus_txt.ForeColor = Color.Black
-     
+
         CustomerGender_txt.ReadOnly = False
         CustomerGender_txt.BackColor = Color.White
         CustomerGender_txt.ForeColor = Color.Black
     End Sub
-
 
 
     Private Sub CustomerUpdateSecond_Click(sender As Object, e As EventArgs) Handles CustomerUpdateSecond.Click
@@ -250,7 +249,5 @@ Public Class CustomerControl
     Private Sub CustomerLock_btn_Click(sender As Object, e As EventArgs) Handles CustomerLock_btn.Click
         UnlockText()
         CustomerRegister_btn.BringToFront()
-       
-        
     End Sub
 End Class

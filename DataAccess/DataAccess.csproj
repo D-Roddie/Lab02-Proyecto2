@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Crud\AddressCrudFactory.cs" />
+    <Compile Include="Crud\AppMessagesCrudFactory.cs" />
     <Compile Include="Crud\ContactCrudFactory.cs" />
     <Compile Include="Crud\CrudFactory.cs" />
     <Compile Include="Crud\AccountCrudFactory.cs" />
@@ -51,6 +52,7 @@
     <Compile Include="Dao\SqlOperation.cs" />
     <Compile Include="Mapper\AccountMapper.cs" />
     <Compile Include="Mapper\AddressMapper.cs" />
+    <Compile Include="Mapper\AppMessageMapper.cs" />
     <Compile Include="Mapper\ContactMapper.cs" />
     <Compile Include="Mapper\CustomerMapper.cs" />
     <Compile Include="Mapper\EntityMapper.cs" />

@@ -109,8 +109,9 @@ Public Class LoanControl
         End If
     End Sub
 
-    Private Sub Loan_ListView_SelectedIndexChanged_1(sender As Object, e As EventArgs) Handles Loan_ListView.SelectedIndexChanged
-        
+    Private Sub Loan_ListView_SelectedIndexChanged_1(sender As Object, e As EventArgs) _
+        Handles Loan_ListView.SelectedIndexChanged
+
         For Each item As ListViewItem In Loan_ListView.SelectedItems
             If item.Selected Then
                 selectedLoan = loanList.Find(Function(x) x.LoansID.Contains(item.SubItems(0).Text))
@@ -122,7 +123,7 @@ Public Class LoanControl
                 LoanStartDate_txt.Text = selectedLoan.StartDate
                 LoanStatus_txt.Text = selectedLoan.Status
                 LoanBalanceOperation_txt.Text = selectedLoan.BalanceOperation
-                
+
             End If
         Next
     End Sub

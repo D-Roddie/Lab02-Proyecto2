@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using DataAccess.Crud;
 using Entities;
+using Exceptions;
 
 namespace BankAccount
 {
@@ -15,7 +17,17 @@ namespace BankAccount
 
         public void Create(Account account)
         {
-            crudAccount.Create(account);
+            try
+            {
+                var c = crudAccount.Retrieve<Account>(account);
+                if (c != null) throw new BusinessException(3);
+
+                crudAccount.Create(account);
+            }
+            catch (Exception ex)
+            {
+                ExceptionManager.GetInstance().Process(ex);
+            }
         }
 
         public List<Account> RetrieveAll()

@@ -1,6 +1,6 @@
 ﻿namespace Entities
 {
-    public class Loans: BaseEntity
+    public class Loans : BaseEntity
     {
         public string LoansID { get; set; }
         public string Amount { get; set; }

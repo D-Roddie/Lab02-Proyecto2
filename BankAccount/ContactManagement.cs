@@ -37,6 +37,5 @@ namespace BankAccount
         {
             crudContact.Delete(contact);
         }
-
     }
 }

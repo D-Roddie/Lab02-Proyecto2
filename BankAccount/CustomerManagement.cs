@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using DataAccess.Crud;
 using Entities;
+using Exceptions;
 
 namespace BankAccount
 {
@@ -15,7 +17,21 @@ namespace BankAccount
 
         public void Create(Customer customer)
         {
-            crudCustomer.Create(customer);
+            try
+            {
+                var c = crudCustomer.Retrieve<Customer>(customer);
+
+                if (c != null) throw new BusinessException();
+
+                if (customer.Age >= 18)
+                    crudCustomer.Create(customer);
+                else
+                    throw new BusinessException(2);
+            }
+            catch (Exception ex)
+            {
+                ExceptionManager.GetInstance().Process(ex);
+            }
         }
 
 

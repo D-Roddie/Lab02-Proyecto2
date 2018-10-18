@@ -6,6 +6,5 @@
         public string Currency { get; set; }
         public string AccountName { get; set; }
         public int Balance { get; set; }
-
     }
 }

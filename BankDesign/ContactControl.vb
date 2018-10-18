@@ -21,15 +21,18 @@ Public Class ContactControl
         ' Add any initialization after the InitializeComponent() call.
     End Sub
 
-    Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click, Label3.Click, Label2.Click, Label9.Click, Label7.Click, Label6.Click, Label10.Click
-
+    Private Sub Label8_Click(sender As Object, e As EventArgs) _
+        Handles Label8.Click, Label3.Click, Label2.Click, Label9.Click, Label7.Click, Label6.Click, Label10.Click
     End Sub
 
-    Private Sub TextBox6_TextChanged(sender As Object, e As EventArgs) Handles ContactID_txt.TextChanged, ContactValue_txt.TextChanged, ContactType_txt.TextChanged, AddressDistrict_txt.TextChanged, AddressStreet_txt.TextChanged, AddressProvince_txt.TextChanged, AddressID_txt.TextChanged
-
+    Private Sub TextBox6_TextChanged(sender As Object, e As EventArgs) _
+        Handles ContactID_txt.TextChanged, ContactValue_txt.TextChanged, ContactType_txt.TextChanged,
+                AddressDistrict_txt.TextChanged, AddressStreet_txt.TextChanged, AddressProvince_txt.TextChanged,
+                AddressID_txt.TextChanged
     End Sub
 
-    Private Sub ListView2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Address_ListView.SelectedIndexChanged
+    Private Sub ListView2_SelectedIndexChanged(sender As Object, e As EventArgs) _
+        Handles Address_ListView.SelectedIndexChanged
         For Each item As ListViewItem In Address_ListView.SelectedItems
             If item.Selected Then
                 selectedAddress = addressList.Find(Function(x) x.IDCustomer.Contains(item.SubItems(0).Text))
@@ -37,12 +40,12 @@ Public Class ContactControl
                 AddressProvince_txt.Text = selectedAddress.Province
                 AddressStreet_txt.Text = selectedAddress.Street
                 AddressDistrict_txt.Text = selectedAddress.District
-                
-                
+
+
             End If
         Next
     End Sub
-    
+
     Private Sub RefreshAccountList()
 
         contactList = cntManagemnet.RetrieveAll()
@@ -66,7 +69,6 @@ Public Class ContactControl
         newContact.ID = ContactID_txt.Text
         newContact.TypeCommunication = ContactType_txt.Text
         newContact.Value = ContactValue_txt.Text
-        
 
 
         cntManagemnet.Create(newContact)
@@ -124,16 +126,16 @@ Public Class ContactControl
         End If
     End Sub
 
-    Private Sub Contact_ListView_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Contact_ListView.SelectedIndexChanged
+    Private Sub Contact_ListView_SelectedIndexChanged(sender As Object, e As EventArgs) _
+        Handles Contact_ListView.SelectedIndexChanged
         For Each item As ListViewItem In Contact_ListView.SelectedItems
             If item.Selected Then
                 selectedContact = contactList.Find(Function(x) x.ID.Contains(item.SubItems(0).Text))
                 ContactID_txt.Text = selectedContact.ID
                 ContactType_txt.Text = selectedContact.TypeCommunication
                 ContactValue_txt.Text = selectedContact.Value
-               
-                
-                
+
+
             End If
         Next
     End Sub
@@ -144,7 +146,6 @@ Public Class ContactControl
             newContact.ID = ContactID_txt.Text
             newContact.TypeCommunication = ContactType_txt.Text
             newContact.Value = ContactValue_txt.Text
-           
 
 
             cntManagemnet.Update(newContact)
@@ -152,7 +153,7 @@ Public Class ContactControl
         End If
     End Sub
 
-    Private Sub Button9_Click(sender As Object, e As EventArgs) 
+    Private Sub Button9_Click(sender As Object, e As EventArgs)
         RefreshAccountList()
     End Sub
 
@@ -165,7 +166,6 @@ Public Class ContactControl
 
         addManagement.Create(newAddress)
         RefreshAddressList()
-       
     End Sub
 
     Private Sub AddressDelete_btn_Click(sender As Object, e As EventArgs) Handles AddressDelete_btn.Click
@@ -178,7 +178,7 @@ Public Class ContactControl
         End If
     End Sub
 
-    Private Sub AddressRefresh_btn_Click(sender As Object, e As EventArgs) 
+    Private Sub AddressRefresh_btn_Click(sender As Object, e As EventArgs)
         RefreshAddressList()
     End Sub
 
@@ -189,7 +189,7 @@ Public Class ContactControl
             newAddress.Province = AddressProvince_txt.Text
             newAddress.Street = AddressStreet_txt.Text
             newAddress.District = AddressDistrict_txt.Text
-           
+
             addManagement.Update(newAddress)
             RefreshAddressList()
         End If

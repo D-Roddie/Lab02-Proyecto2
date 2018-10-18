@@ -16,11 +16,13 @@ Public Class AccountControlv2
         ' Add any initialization after the InitializeComponent() call.
     End Sub
 
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles AccountID_txt.TextChanged, AccountCurrency_txt.TextChanged, AccountName_txt.TextChanged, AccountBalance_txt.TextChanged
-
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) _
+        Handles AccountID_txt.TextChanged, AccountCurrency_txt.TextChanged, AccountName_txt.TextChanged,
+                AccountBalance_txt.TextChanged
     End Sub
 
-    Private Sub ListView1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Account_ListView.SelectedIndexChanged
+    Private Sub ListView1_SelectedIndexChanged(sender As Object, e As EventArgs) _
+        Handles Account_ListView.SelectedIndexChanged
         For Each item As ListViewItem In Account_ListView.SelectedItems
             If item.Selected Then
                 selectAccount = accountList.Find(Function(x) x.Identification.Contains(item.SubItems(0).Text))
@@ -28,8 +30,8 @@ Public Class AccountControlv2
                 AccountName_txt.Text = selectAccount.AccountName
                 AccountCurrency_txt.Text = selectAccount.Currency
                 AccountBalance_txt.Text = selectAccount.Balance
-                
-                
+
+
             End If
         Next
     End Sub
@@ -89,15 +91,15 @@ Public Class AccountControlv2
 
     Private Sub AccountUpdate_btn_Click(sender As Object, e As EventArgs) Handles AccountUpdate_btn.Click
         If AccountID_txt.Text IsNot "" Then
-        Dim newAccount As New Account
-        newAccount.Identification = AccountID_txt.Text
-        newAccount.AccountName = AccountName_txt.Text
-        newAccount.Currency = AccountCurrency_txt.Text
-        newAccount.Balance = AccountBalance_txt.Text
+            Dim newAccount As New Account
+            newAccount.Identification = AccountID_txt.Text
+            newAccount.AccountName = AccountName_txt.Text
+            newAccount.Currency = AccountCurrency_txt.Text
+            newAccount.Balance = AccountBalance_txt.Text
 
 
-        accManagement.Update(newAccount)
-        RefreshAccountList()
+            accManagement.Update(newAccount)
+            RefreshAccountList()
         End If
     End Sub
 End Class

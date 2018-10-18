@@ -18,7 +18,7 @@ namespace DataAccess.Crud
 
         public override void Create(BaseEntity entity)
         {
-            var loan = (Loans)entity;
+            var loan = (Loans) entity;
             var sqlOperation = mapper.GetCreateStatement(loan);
             dao.ExecuteProcedure(sqlOperation);
         }
@@ -31,7 +31,7 @@ namespace DataAccess.Crud
             {
                 dic = lstResult[0];
                 var objs = mapper.BuildObject(dic);
-                return (T)Convert.ChangeType(objs, typeof(T));
+                return (T) Convert.ChangeType(objs, typeof(T));
             }
 
             return default(T);
@@ -45,7 +45,7 @@ namespace DataAccess.Crud
             if (lstResult.Count > 0)
             {
                 var objs = mapper.BuildObjects(lstResult);
-                foreach (var c in objs) lstLoan.Add((T)Convert.ChangeType(c, typeof(T)));
+                foreach (var c in objs) lstLoan.Add((T) Convert.ChangeType(c, typeof(T)));
             }
 
             return lstLoan;
@@ -53,13 +53,13 @@ namespace DataAccess.Crud
 
         public override void Update(BaseEntity entity)
         {
-            var loan = (Loans)entity;
+            var loan = (Loans) entity;
             dao.ExecuteProcedure(mapper.GetUpdateStatement(loan));
         }
 
         public override void Delete(BaseEntity entity)
         {
-            var loan = (Loans)entity;
+            var loan = (Loans) entity;
             dao.ExecuteProcedure(mapper.GetDeleteStatement(loan));
         }
     }

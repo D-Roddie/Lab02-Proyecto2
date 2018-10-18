@@ -1,6 +1,4 @@
-﻿
-
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using DataAccess.Dao;
 using Entities;
 
@@ -12,11 +10,11 @@ namespace DataAccess.Mapper
         private const string DB_COL_AMOUNT = "AMOUNT";
         private const string DB_COL_RATE = "RATE";
         private const string DB_COL_LOANNAME = "LOANNAME";
-        private const string DB_COL_SHARE= "SHARE";
+        private const string DB_COL_SHARE = "SHARE";
         private const string DB_COL_STARTDATE = "STARTDATE";
-        private const string DB_COL_LOANSTATUS= "LOANSTATUS";
+        private const string DB_COL_LOANSTATUS = "LOANSTATUS";
         private const string DB_COL_BALANCEOPERATION = "BALANCEOPERATION";
-        
+
         public BaseEntity BuildObject(Dictionary<string, object> row)
         {
             var loan = new Loans
@@ -47,8 +45,8 @@ namespace DataAccess.Mapper
 
         public SqlOperation GetCreateStatement(BaseEntity entity)
         {
-            var operation = new SqlOperation { ProcedureName = "CRE_LOAN_PR" };
-            var c = (Loans)entity;
+            var operation = new SqlOperation {ProcedureName = "CRE_LOAN_PR"};
+            var c = (Loans) entity;
             operation.AddVarcharParam(DB_COL_ID, c.LoansID);
             operation.AddVarcharParam(DB_COL_AMOUNT, c.Amount);
             operation.AddVarcharParam(DB_COL_RATE, c.Rate);
@@ -63,14 +61,14 @@ namespace DataAccess.Mapper
 
         public SqlOperation GetRetrieveAllStatement()
         {
-            var operation = new SqlOperation { ProcedureName = "RET_ALL_LOAN_PR" };
+            var operation = new SqlOperation {ProcedureName = "RET_ALL_LOAN_PR"};
             return operation;
         }
 
         public SqlOperation GetUpdateStatement(BaseEntity entity)
         {
-            var operation = new SqlOperation { ProcedureName = "UPD_ACCOUNT_PR" };
-            var c = (Loans)entity;
+            var operation = new SqlOperation {ProcedureName = "UPD_ACCOUNT_PR"};
+            var c = (Loans) entity;
             operation.AddVarcharParam(DB_COL_ID, c.LoansID);
             operation.AddVarcharParam(DB_COL_AMOUNT, c.Amount);
             operation.AddVarcharParam(DB_COL_RATE, c.Rate);
@@ -85,16 +83,16 @@ namespace DataAccess.Mapper
 
         public SqlOperation GetDeleteStatement(BaseEntity entity)
         {
-            var operation = new SqlOperation { ProcedureName = "DEL_LOAN_PR" };
-            var c = (Loans)entity;
+            var operation = new SqlOperation {ProcedureName = "DEL_LOAN_PR"};
+            var c = (Loans) entity;
             operation.AddVarcharParam(DB_COL_ID, c.LoansID);
             return operation;
         }
 
         public SqlOperation GetRetrieveStatement(BaseEntity entity)
         {
-            var operation = new SqlOperation { ProcedureName = "RET_LOAN_PR" };
-            var c = (Loans)entity;
+            var operation = new SqlOperation {ProcedureName = "RET_LOAN_PR"};
+            var c = (Loans) entity;
             operation.AddVarcharParam(DB_COL_ID, c.LoansID);
             return operation;
         }
